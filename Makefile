@@ -8,8 +8,10 @@ train:
 	$(CC) $(CFLAGS) train.c -o train $(LDFLAGS)
 
 unzip:
-	gunzip test.fann.gz
-	gunzip train.fann.gz
+	zcat test.fann.gz > test.fann
+	zcat train.fann.gz > train.fann
 
 clean:
 	rm -f test train
+
+.PHONY: test train clean
