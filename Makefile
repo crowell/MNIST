@@ -11,3 +11,5 @@ unzip:
 	gunzip test.fann.gz
 	gunzip train.fann.gz
 
+clean:
+	rm -f test train
