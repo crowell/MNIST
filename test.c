@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "floatfann.h"
 
 int nn_2_val(fann_type* out) {
@@ -20,7 +21,7 @@ int main(void) {
 
 	struct fann *ann = fann_create_from_file("numbers.net");
 	FILE* fh;
-	fh = fopen("./nntest.nn", "r");
+	fh = fopen("./test.fann", "r");
 	if (fh == NULL){
 		printf("file doesn't exist!\n");
 		return 0;
