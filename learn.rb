@@ -30,9 +30,6 @@ net = Ai4r::NeuralNetwork::Backpropagation.new([doc[1], 30, doc[2]])
 	inp.each_with_index{|x,j|
 		error = net.train(x, outp[j])
 		puts "error after iteration #{i},#{j}:\t#{error}" if j % 100 == 0
-		if j == 100
-			break
-		end
 	}
 }
 
